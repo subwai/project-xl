@@ -1,13 +1,12 @@
 package gui;
 
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-
-import models.LabelModel;
 
 public class ColoredLabel extends JLabel {
 	
@@ -24,5 +23,4 @@ public class ColoredLabel extends JLabel {
         setBackground(color);
         setOpaque(true);
     }
-
 }

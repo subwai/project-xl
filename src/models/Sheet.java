@@ -33,8 +33,6 @@ private void inform(){
 }
 
 public double value(String name){
-String s = name;
-if()
 	return map.get(name).value(this);
 }
 }

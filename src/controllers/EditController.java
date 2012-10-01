@@ -6,16 +6,17 @@ import java.util.Observable;
 
 import models.EditModel;
 
-public class Editor extends Observable implements ActionListener {
+public class EditController implements ActionListener {
 	
-	public Editor(EditModel editor) {
-		
+	private EditModel model;
+	
+	public EditController(EditModel editor) {
+		model = editor;
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		this.setChanged();
-		this.notifyAll();
+		model.setText(((Editor)e.getSource()).toString());
 	}
 
 }
