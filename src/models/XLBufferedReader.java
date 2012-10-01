@@ -1,4 +1,4 @@
-package model;
+package models;
 //package util;
 
 import java.io.BufferedReader;
