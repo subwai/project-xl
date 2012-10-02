@@ -3,21 +3,43 @@ package gui;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Observable;
+import java.util.Observer;
 
-import models.CurrentSlot;
+import models.CurrentModel;
+import models.SlotModel;
 
-public class SlotLabel extends ColoredLabel implements MouseListener {
-	private CurrentSlot current;
+public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
+	private SlotModel model;
+	private CurrentModel currentModel;
 	
-    public SlotLabel(CurrentSlot current) {
+    public SlotLabel(SlotModel model, CurrentModel currentModel) {
         super("                    ", Color.WHITE, RIGHT);
-        this.current = current;
+        this.model = model;
+        this.currentModel = currentModel;
         addMouseListener(this);
+        model.addObserver(this);
+        currentModel.addObserver(this);
     }
 
+    @Override
+	public void update(Observable o, Object arg) {
+    	if (arg.equals(0)) {
+    		if (currentModel.getSlot().equals(model)) {
+    			setBackground(Color.YELLOW);
+    		} else {
+    			setBackground(Color.WHITE);
+    		}
+    	}
+		
+		if (arg.equals(1)) {
+			setText(String.valueOf(model.getValue(null)));
+		}
+	}
+    
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		current.setCurrent((SlotLabel)e.getSource());
+		currentModel.setCurrent(model);
 	}
 
 	@Override
