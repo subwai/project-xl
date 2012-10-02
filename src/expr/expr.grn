@@ -79,14 +79,14 @@
    </type>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Add.java[Add"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <targetType="=xl/src<expr{Expr.java[Expr"/>
       <bendpoints>
       </bendpoints>
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Div.java[Div"/>
+      <sourceType="=xl/src<expr{Add.java[Add"/>
       <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <bendpoints>
       </bendpoints>
@@ -99,44 +99,9 @@
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <targetType="=xl/src<expr{Expr.java[Expr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Sub.java[Sub"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Mul.java[Mul"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
       <class="edu.buffalo.cse.green.relationship.association.AssociationPart"/>
       <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <targetType="=xl/src<expr{Expr.java[Expr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
-      <targetType="=xl/src<expr{Expr.java[Expr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
-      <targetType="=xl/src<expr{Num.java[Num"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -151,6 +116,41 @@
       <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
       <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
       <targetType="=xl/src<expr{Variable.java[Variable"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <targetType="=xl/src<expr{Num.java[Num"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
+      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <targetType="=xl/src<expr{Expr.java[Expr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Div.java[Div"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Mul.java[Mul"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Sub.java[Sub"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <bendpoints>
       </bendpoints>
    </relationship>

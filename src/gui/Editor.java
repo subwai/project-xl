@@ -8,15 +8,21 @@ import java.util.Observer;
 
 import javax.swing.JTextField;
 
+import expr.Environment;
+
 import models.CurrentModel;
+import models.Sheet;
+import models.SlotModel;
 
 public class Editor extends JTextField implements ActionListener, Observer {
 	private CurrentModel model;
+	private Sheet env;
 	
-    public Editor(CurrentModel model) {
+    public Editor(CurrentModel model, Sheet env) {
         setBackground(Color.WHITE);
         this.model = model;
         this.model.addObserver(this);
+        this.env = env;
         addActionListener(this);
     }
 
@@ -27,6 +33,8 @@ public class Editor extends JTextField implements ActionListener, Observer {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		model.getSlot().setExpression(getText());
+		SlotModel sm = model.getSlot();
+		sm.setContent(getText(), env);
+		env.add(sm.getName(), sm);
 	}
 }

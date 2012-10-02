@@ -1,8 +1,5 @@
 package models;
 
-import gui.SlotLabel;
-
-import java.awt.Color;
 import java.util.Observable;
 
 public class CurrentModel extends Observable {
