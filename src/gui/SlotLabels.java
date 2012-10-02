@@ -10,15 +10,15 @@ import java.util.Observer;
 
 import javax.swing.SwingConstants;
 
-import models.LabelModel;
+import models.CurrentSlot;
 
-import controllers.LabelController;
-
-public class SlotLabels extends GridPanel implements MouseListener {
+public class SlotLabels extends GridPanel implements Observer {
     private List<SlotLabel> labelList;
+    private CurrentSlot current;
 
     public SlotLabels(int rows, int cols) {
-        super(rows + 1, cols);        
+        super(rows + 1, cols);
+        current = new CurrentSlot();
         labelList = new ArrayList<SlotLabel>(rows * cols);
         for (char ch = 'A'; ch < 'A' + cols; ch++) {
             add(new ColoredLabel(Character.toString(ch), Color.LIGHT_GRAY,
@@ -26,44 +26,18 @@ public class SlotLabels extends GridPanel implements MouseListener {
         }
         for (int row = 1; row <= rows; row++) {
             for (char ch = 'A'; ch < 'A' + cols; ch++) {
-                SlotLabel label = new SlotLabel();
+                SlotLabel label = new SlotLabel(current);
                 add(label);
                 labelList.add(label);
             }
         }
-        SlotLabel firstLabel = labelList.get(0);
-        firstLabel.setBackground(Color.YELLOW);
+        current.addObserver(this);
+        current.setCurrent(labelList.get(0));
+        update(null, null);
     }
-
-	@Override
-	public void mouseClicked(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
     
-    
+	@Override
+	public void update(Observable o, Object arg) {
+		current.getCurrent().setBackground(Color.YELLOW);
+	}
 }
