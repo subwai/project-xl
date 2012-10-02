@@ -3,7 +3,7 @@ package models;
 import expr.Environment;
 import expr.Expr;
 
-public class ExprSlot implements Slot {
+public class ExprSlot extends Slot {
 Expr expr;
 
 ExprSlot(Expr expr){
@@ -12,5 +12,9 @@ ExprSlot(Expr expr){
 
 public double value(Environment env){
 	return expr.value(env);
+}
+
+public String toString(){
+	return expr.toString();
 }
 }

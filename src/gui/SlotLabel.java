@@ -3,10 +3,13 @@ package gui;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.Observable;
+import java.util.Observer;
 
 import models.CurrentSlot;
+import models.Sheet;
 
-public class SlotLabel extends ColoredLabel implements MouseListener {
+public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 	private CurrentSlot current;
 	
     public SlotLabel(CurrentSlot current) {
@@ -43,4 +46,17 @@ public class SlotLabel extends ColoredLabel implements MouseListener {
 		// TODO Auto-generated method stub
 		
 	}
+	public void update(Observable o, Object arg) {
+		if(arg instanceof Sheet){
+			Sheet sheet = (Sheet) arg;
+		try{
+			setText(String.valueOf(sheet.value(new String("A1"))));}  catch (Exception e){
+				setText(sheet.toString("a1"));
+			}
+		}
+	}
+		
+	
+	
+	
 }

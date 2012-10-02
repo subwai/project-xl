@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.Observable;
 
 import expr.Environment;
-import expr.Expr;
 
 public class Sheet extends Observable implements Environment {
 	HashMap<String, Slot> map = new HashMap<String, Slot>();
@@ -41,8 +40,12 @@ public class Sheet extends Observable implements Environment {
 			System.out.println("Kan inte utföra räkneoperationer med en textruta");
 			return 0;
 		}
+	}
 
+	public String toString(String name){
+		return map.get(name).toString();
+	}
 
 	}
-}
+
 

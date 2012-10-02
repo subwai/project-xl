@@ -2,6 +2,6 @@ package models;
 
 import expr.Environment;
 
-public interface Slot {
-	double value(Environment env) throws Exception;
+public abstract class Slot{
+	abstract double value(Environment env) throws Exception;
 }
