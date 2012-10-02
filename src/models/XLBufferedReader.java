@@ -17,7 +17,7 @@ public class XLBufferedReader extends BufferedReader {
     }
 
     // TODO Change Object to something appropriate
-    public void load(Map<String, Slot> map) {
+    public void load(Map<String, Content> map) {
         try {
             while (ready()) {
                 String string = readLine();

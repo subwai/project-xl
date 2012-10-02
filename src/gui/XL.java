@@ -11,14 +11,15 @@ import java.awt.print.Printable;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import models.EditModel;
+import models.CurrentModel;
 
 public class XL extends JFrame implements Printable {
     private static final int ROWS = 10, COLUMNS = 8;
     private XLCounter counter;
     private StatusLabel statusLabel = new StatusLabel();
-    private XLList xlList;
-
+    private XLList xlList; 
+    private CurrentModel currentModel;
+    
     public XL(XL oldXL) {
         this(oldXL.xlList, oldXL.counter);
     }
@@ -29,10 +30,10 @@ public class XL extends JFrame implements Printable {
         this.counter = counter;
         xlList.add(this);
         counter.increment();
-        JPanel statusPanel = new StatusPanel(statusLabel);
-        JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS);
-        EditModel edit = new EditModel();
-        Editor editor = new Editor(edit);
+        currentModel = new CurrentModel();
+        JPanel statusPanel = new StatusPanel(statusLabel, currentModel);
+        JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, currentModel);
+        Editor editor = new Editor(currentModel);   
         add(NORTH, statusPanel);
         add(CENTER, editor);
         add(SOUTH, sheetPanel);
