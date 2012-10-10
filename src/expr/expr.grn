@@ -25,8 +25,8 @@
       <name="=xl/src<expr{Environment.java[Environment"/>
       <height="-1"/>
       <width="-1"/>
-      <x="75"/>
-      <y="110"/>
+      <x="80"/>
+      <y="113"/>
    </type>
    <type>
       <name="=xl/src<expr{Div.java[Div"/>
@@ -78,23 +78,37 @@
       <y="454"/>
    </type>
    <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <targetType="=xl/src<expr{Num.java[Num"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Mul.java[Mul"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <targetType="=xl/src<expr{Variable.java[Variable"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
+      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <targetType="=xl/src<expr{Expr.java[Expr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=xl/src<expr{Add.java[Add"/>
       <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Div.java[Div"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Variable.java[Variable"/>
-      <targetType="=xl/src<expr{Expr.java[Expr"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -113,13 +127,6 @@
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Mul.java[Mul"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
       <class="edu.buffalo.cse.green.relationship.association.AssociationPart"/>
       <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <targetType="=xl/src<expr{Expr.java[Expr"/>
@@ -127,16 +134,9 @@
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Variable.java[Variable"/>
       <targetType="=xl/src<expr{Expr.java[Expr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
-      <targetType="=xl/src<expr{Num.java[Num"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -148,9 +148,9 @@
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
-      <targetType="=xl/src<expr{Variable.java[Variable"/>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Div.java[Div"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <bendpoints>
       </bendpoints>
    </relationship>

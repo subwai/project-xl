@@ -99,51 +99,16 @@
       <y="428"/>
    </type>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<gui{StatusLabel.java[StatusLabel"/>
-      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=xl/src<gui{RowLabels.java[RowLabels"/>
-      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=xl/src<gui{SheetPanel.java[SheetPanel"/>
-      <targetType="=xl/src<gui{RowLabels.java[RowLabels"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<gui{RowLabels.java[RowLabels"/>
-      <targetType="=xl/src<gui{GridPanel.java[GridPanel"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<gui{SlotLabel.java[SlotLabel"/>
-      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
-      <sourceType="=xl/src<gui{SheetPanel.java[SheetPanel"/>
-      <targetType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
       <sourceType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
-      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
+      <targetType="=xl/src<gui{SlotLabel.java[SlotLabel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
+      <sourceType="=xl/src<gui{XL.java[XL"/>
+      <targetType="=xl/src<gui{Editor.java[Editor"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -162,30 +127,9 @@
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<gui{CurrentLabel.java[CurrentLabel"/>
-      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
       <sourceType="=xl/src<gui{SheetPanel.java[SheetPanel"/>
-      <targetType="=xl/src<gui{BorderPanel.java[BorderPanel"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=xl/src<gui{XL.java[XL"/>
-      <targetType="=xl/src<gui{Editor.java[Editor"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
-      <targetType="=xl/src<gui{SlotLabel.java[SlotLabel"/>
+      <targetType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -198,13 +142,48 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<gui{SheetPanel.java[SheetPanel"/>
+      <targetType="=xl/src<gui{BorderPanel.java[BorderPanel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<gui{RowLabels.java[RowLabels"/>
+      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
+      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<gui{SheetPanel.java[SheetPanel"/>
+      <targetType="=xl/src<gui{RowLabels.java[RowLabels"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<gui{CurrentLabel.java[CurrentLabel"/>
+      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=xl/src<gui{StatusPanel.java[StatusPanel"/>
       <targetType="=xl/src<gui{BorderPanel.java[BorderPanel"/>
       <bendpoints>
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.composition.CompositionPart"/>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
       <sourceType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
       <targetType="=xl/src<gui{SlotLabel.java[SlotLabel"/>
       <bendpoints>
@@ -214,6 +193,27 @@
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=xl/src<gui{SlotLabels.java[SlotLabels"/>
       <targetType="=xl/src<gui{GridPanel.java[GridPanel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<gui{RowLabels.java[RowLabels"/>
+      <targetType="=xl/src<gui{GridPanel.java[GridPanel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<gui{SlotLabel.java[SlotLabel"/>
+      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<gui{StatusLabel.java[StatusLabel"/>
+      <targetType="=xl/src<gui{ColoredLabel.java[ColoredLabel"/>
       <bendpoints>
       </bendpoints>
    </relationship>

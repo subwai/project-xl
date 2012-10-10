@@ -4,83 +4,97 @@
       <name="=xl/src<expr{Add.java[Add"/>
       <height="-1"/>
       <width="-1"/>
-      <x="21"/>
-      <y="469"/>
+      <x="93"/>
+      <y="528"/>
    </type>
    <type>
       <name="=xl/src<expr{Num.java[Num"/>
       <height="-1"/>
       <width="-1"/>
-      <x="507"/>
-      <y="330"/>
+      <x="550"/>
+      <y="286"/>
    </type>
    <type>
       <name="=xl/src<expr{TestExpr.java[TestExpr"/>
       <height="-1"/>
       <width="-1"/>
-      <x="80"/>
-      <y="27"/>
+      <x="85"/>
+      <y="50"/>
    </type>
    <type>
       <name="=xl/src<expr{Environment.java[Environment"/>
       <height="-1"/>
       <width="-1"/>
-      <x="80"/>
-      <y="113"/>
+      <x="79"/>
+      <y="130"/>
    </type>
    <type>
       <name="=xl/src<expr{Div.java[Div"/>
       <height="-1"/>
       <width="-1"/>
-      <x="317"/>
-      <y="583"/>
+      <x="2"/>
+      <y="393"/>
    </type>
    <type>
       <name="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <height="-1"/>
       <width="-1"/>
-      <x="144"/>
-      <y="269"/>
+      <x="249"/>
+      <y="196"/>
    </type>
    <type>
       <name="=xl/src<expr{Mul.java[Mul"/>
       <height="-1"/>
       <width="-1"/>
-      <x="317"/>
-      <y="475"/>
+      <x="501"/>
+      <y="436"/>
    </type>
    <type>
       <name="=xl/src<expr{Expr.java[Expr"/>
       <height="-1"/>
       <width="-1"/>
-      <x="474"/>
-      <y="83"/>
+      <x="515"/>
+      <y="87"/>
    </type>
    <type>
       <name="=xl/src<expr{Variable.java[Variable"/>
       <height="-1"/>
       <width="-1"/>
-      <x="797"/>
-      <y="217"/>
+      <x="839"/>
+      <y="167"/>
    </type>
    <type>
       <name="=xl/src<expr{Sub.java[Sub"/>
       <height="-1"/>
       <width="-1"/>
-      <x="15"/>
-      <y="582"/>
+      <x="350"/>
+      <y="550"/>
    </type>
    <type>
       <name="=xl/src<expr{ExprParser.java[ExprParser"/>
       <height="-1"/>
       <width="-1"/>
-      <x="812"/>
-      <y="454"/>
+      <x="850"/>
+      <y="329"/>
    </type>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
       <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
-      <targetType="=xl/src<expr{Num.java[Num"/>
+      <targetType="=xl/src<expr{Expr.java[Expr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <targetType="=xl/src<expr{Expr.java[Expr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Div.java[Div"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -99,37 +113,9 @@
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.dependency.DependencyLPart"/>
-      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
-      <targetType="=xl/src<expr{Expr.java[Expr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=xl/src<expr{Add.java[Add"/>
       <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <targetType="=xl/src<expr{Expr.java[Expr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Sub.java[Sub"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <bendpoints>
-      </bendpoints>
-   </relationship>
-   <relationship>
-      <class="edu.buffalo.cse.green.relationship.association.AssociationPart"/>
-      <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
-      <targetType="=xl/src<expr{Expr.java[Expr"/>
       <bendpoints>
       </bendpoints>
    </relationship>
@@ -142,15 +128,29 @@
    </relationship>
    <relationship>
       <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
+      <sourceType="=xl/src<expr{Sub.java[Sub"/>
+      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.dependency.DependencyIPart"/>
+      <sourceType="=xl/src<expr{ExprParser.java[ExprParser"/>
+      <targetType="=xl/src<expr{Num.java[Num"/>
+      <bendpoints>
+      </bendpoints>
+   </relationship>
+   <relationship>
+      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
       <sourceType="=xl/src<expr{Num.java[Num"/>
       <targetType="=xl/src<expr{Expr.java[Expr"/>
       <bendpoints>
       </bendpoints>
    </relationship>
    <relationship>
-      <class="edu.buffalo.cse.green.relationship.generalization.GeneralizationPart"/>
-      <sourceType="=xl/src<expr{Div.java[Div"/>
-      <targetType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <class="edu.buffalo.cse.green.relationship.association.AssociationPart"/>
+      <sourceType="=xl/src<expr{BinaryExpr.java[BinaryExpr"/>
+      <targetType="=xl/src<expr{Expr.java[Expr"/>
       <bendpoints>
       </bendpoints>
    </relationship>

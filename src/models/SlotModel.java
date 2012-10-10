@@ -26,7 +26,13 @@ public class SlotModel extends Observable {
 		return content.toString();
 	}
 	
-	public String getValue(Environment env) {
+	public String getValue(Environment env) throws Exception {
 		return String.valueOf(content.value(env));
+	}
+	
+	private void circleErrorDetection(SlotModel sm) throws Exception{
+		if(this == sm){
+			throw new Exception();
+		}
 	}
 }

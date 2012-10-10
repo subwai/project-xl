@@ -66,4 +66,6 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
 		// TODO Auto-generated method stub
 		
 	}	
+	
+	
 }
