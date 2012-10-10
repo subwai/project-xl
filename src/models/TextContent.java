@@ -10,8 +10,9 @@ public TextContent(String string){
 		this.string = string;
 	}
 
-	public double value(Environment env) throws Exception {
-		throw new XLException("Kan inte utföra räkneoperationer med textruta");
+	public double value(Environment env) throws XLException {
+		return 0;
+		//throw new XLException("Kan inte utföra räkneoperationer med textruta");
 	}
 
 	public String toString(){

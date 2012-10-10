@@ -35,7 +35,7 @@ public class XL extends JFrame implements Printable {
         counter.increment();
         currentModel = new CurrentModel();
         env = new Sheet();
-        statusLabel = new StatusLabel(env);
+        statusLabel = new StatusLabel(currentModel);
         JPanel statusPanel = new StatusPanel(statusLabel, currentModel);
         JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, currentModel);
         Editor editor = new Editor(currentModel, env);   

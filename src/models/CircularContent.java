@@ -5,18 +5,21 @@ import expr.Environment;
 import expr.Expr;
 
 public class CircularContent implements Content {
-	SlotModel s;
+	Content s;
 	
-	public CircularContent(SlotModel s){
+	public CircularContent(Content s){
 		this.s = s;
 	}
 	
-	public double value(Environment env) throws Exception {
+	public double value(Environment env) throws XLException {
+		if(s instanceof ExprContent){
+			
 		try{
-			return s.getValue(env);
+			s.value(env);
 		} catch (StackOverflowError e){
 			throw new XLException("Cirkulär referens");
 		}
 	}
-
+	return s.value(env);
+	}
 }

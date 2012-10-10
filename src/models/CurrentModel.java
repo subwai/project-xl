@@ -14,4 +14,8 @@ public class CurrentModel extends Observable {
 	public SlotModel getSlot() {
 		return slot;
 	}
+	
+	public String ErrorState(){
+		return slot.getError();
+	}
 }

@@ -7,6 +7,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 import models.CurrentModel;
+import models.ExprContent;
 import models.Sheet;
 import models.SlotModel;
 
@@ -34,12 +35,19 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
     	}
 		
     	if(arg instanceof Sheet){
-			try {
-				setText(String.valueOf(model.getValue((Sheet)arg)));
-			} catch (Exception e) {
-				setText(model.getText());
-			}
-		}
+    		if(model.getContent() instanceof ExprContent){
+    			setText(String.valueOf(model.getValue((Sheet)arg)));
+    		} else {
+    			setText(model.getText());
+    		}
+    			
+    	}
+//			try {
+//				setText(String.valueOf(model.getValue((Sheet)arg)));
+//			} catch (Exception e) {
+//				setText(model.getText());
+//			}
+//		}
 	}
     
 	@Override
