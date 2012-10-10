@@ -2,7 +2,7 @@ package models;
 
 import expr.Environment;
 
-public class TextContent extends Content{
+public class TextContent implements Content{
 	String string;
 	
 public TextContent(String string){

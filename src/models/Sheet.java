@@ -3,17 +3,25 @@ package models;
 import java.util.HashMap;
 import java.util.Observable;
 
+import util.XLException;
+
 import expr.Environment;
 
 public class Sheet extends Observable implements Environment {
-	HashMap<String, Content> map = new HashMap<String, Content>();
+	HashMap<String, SlotModel> map = new HashMap<String, SlotModel>();
 
 	public Sheet() {
-		map = new HashMap<String, Content>();
+		map = new HashMap<String, SlotModel>();
 	}
 
-	public void add(String key, Content value) {
+	public void add(String key, SlotModel value) throws Exception {
 		remove(key);
+		CircularContent cc = new CircularContent(value.content);
+		try{
+			cc.value(this);
+		} catch (XLException e){
+		
+		}
 		map.put(key, value);
 		inform();
 	}
@@ -33,10 +41,10 @@ public class Sheet extends Observable implements Environment {
 	public double value(String name) {
 
 		try {
-			return map.get(name).value(this);
+			return map.get(name).getValue(this);
 		} catch (Exception e) {
-			System.out
-					.println("Kan inte utföra räkneoperationer med en textruta");
+			e.printStackTrace();
+			System.out.println("Kan inte utföra räkneoperationer med en textruta");
 			return 0;
 		}
 

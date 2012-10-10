@@ -3,6 +3,7 @@ package gui;
 import static java.awt.BorderLayout.CENTER;
 import static java.awt.BorderLayout.NORTH;
 import static java.awt.BorderLayout.SOUTH;
+import expr.Environment;
 import gui.menu.XLMenuBar;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -12,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import models.CurrentModel;
+import models.Sheet;
 
 public class XL extends JFrame implements Printable {
     private static final int ROWS = 10, COLUMNS = 8;
@@ -19,6 +21,7 @@ public class XL extends JFrame implements Printable {
     private StatusLabel statusLabel = new StatusLabel();
     private XLList xlList; 
     private CurrentModel currentModel;
+    private Sheet env;
     
     public XL(XL oldXL) {
         this(oldXL.xlList, oldXL.counter);
@@ -31,9 +34,10 @@ public class XL extends JFrame implements Printable {
         xlList.add(this);
         counter.increment();
         currentModel = new CurrentModel();
+        env = new Sheet();
         JPanel statusPanel = new StatusPanel(statusLabel, currentModel);
         JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, currentModel);
-        Editor editor = new Editor(currentModel);   
+        Editor editor = new Editor(currentModel, env);   
         add(NORTH, statusPanel);
         add(CENTER, editor);
         add(SOUTH, sheetPanel);

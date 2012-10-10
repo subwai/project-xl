@@ -3,19 +3,28 @@ package models;
 import java.util.Observable;
 
 import expr.Environment;
-import expr.Expr;
+import expr.ExprParser;
 
 public class SlotModel extends Observable {
+	private static final ExprParser parser = new ExprParser();
+	
 	private String name;
-	private Content content;
+	Content content;
 	
 	public SlotModel(String name) {
 		this.name = name;
+		content = new TextContent("                    ");
 	}
 	
-	public void setExpression(String text) {
+	public void setContent(String text, Environment env) {
+		try {
+			content = new ExprContent(parser.build(text));
+		} catch (Exception e) {
+			content = new TextContent(text);
+		}
+		
 		setChanged();
-		notifyObservers(1);
+		notifyObservers(env);
 	}
 	
 	public String getName() {
@@ -26,13 +35,9 @@ public class SlotModel extends Observable {
 		return content.toString();
 	}
 	
-	public String getValue(Environment env) throws Exception {
-		return String.valueOf(content.value(env));
+
+	public double getValue(Environment env) throws Exception {
+		return content.value(env);
 	}
-	
-	private void circleErrorDetection(SlotModel sm) throws Exception{
-		if(this == sm){
-			throw new Exception();
-		}
-	}
+
 }

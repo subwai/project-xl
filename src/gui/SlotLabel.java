@@ -34,7 +34,11 @@ public class SlotLabel extends ColoredLabel implements MouseListener, Observer {
     	}
 		
     	if(arg instanceof Sheet){
-			setText(String.valueOf(model.getValue((Sheet)arg)));
+			try {
+				setText(String.valueOf(model.getValue((Sheet)arg)));
+			} catch (Exception e) {
+				setText(model.getText());
+			}
 		}
 	}
     
