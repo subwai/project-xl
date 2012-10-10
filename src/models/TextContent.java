@@ -1,5 +1,6 @@
 package models;
 
+import util.XLException;
 import expr.Environment;
 
 public class TextContent implements Content{
@@ -10,7 +11,7 @@ public TextContent(String string){
 	}
 
 	public double value(Environment env) throws Exception {
-		throw new Exception();
+		throw new XLException("Kan inte utföra räkneoperationer med textruta");
 	}
 
 	public String toString(){

@@ -9,18 +9,21 @@ import expr.Environment;
 
 public class Sheet extends Observable implements Environment {
 	HashMap<String, SlotModel> map = new HashMap<String, SlotModel>();
+	String error;
 
 	public Sheet() {
 		map = new HashMap<String, SlotModel>();
+		error = "";
 	}
 
 	public void add(String key, SlotModel value) throws Exception {
 		remove(key);
-		CircularContent cc = new CircularContent(value.content);
+		CircularContent cc = new CircularContent(value);
 		try{
 			cc.value(this);
 		} catch (XLException e){
-		
+		error = e.getMessage();
+		inform();
 		}
 		map.put(key, value);
 		inform();
@@ -37,16 +40,21 @@ public class Sheet extends Observable implements Environment {
 		setChanged();
 		notifyObservers();
 	}
-
-	public double value(String name) {
-
-		try {
-			return map.get(name).getValue(this);
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("Kan inte utföra räkneoperationer med en textruta");
-			return 0;
+	
+	private void check(SlotModel s) throws Exception {
+		CircularContent cc = new CircularContent(s);
+		try { cc.value(this);}
+		catch (XLException e) {
+			error = e.getMessage();
 		}
+				
+	}
+
+	public double value(String name){
+				check(map.get(name));
+				return map.get(name).getValue(this);
+			
+		
 
 	}
 
@@ -54,4 +62,7 @@ public class Sheet extends Observable implements Environment {
 		return map.get(name).toString();
 	}
 
+	public String state(){
+		return error;
+	}
 }

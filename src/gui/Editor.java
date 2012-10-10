@@ -35,6 +35,11 @@ public class Editor extends JTextField implements ActionListener, Observer {
 	public void actionPerformed(ActionEvent e) {
 		SlotModel sm = model.getSlot();
 		sm.setContent(getText(), env);
-		env.add(sm.getName(), sm);
+		try {
+			env.add(sm.getName(), sm);
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 	}
 }

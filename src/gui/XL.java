@@ -18,10 +18,10 @@ import models.Sheet;
 public class XL extends JFrame implements Printable {
     private static final int ROWS = 10, COLUMNS = 8;
     private XLCounter counter;
-    private StatusLabel statusLabel = new StatusLabel();
     private XLList xlList; 
     private CurrentModel currentModel;
     private Sheet env;
+    private StatusLabel statusLabel;
     
     public XL(XL oldXL) {
         this(oldXL.xlList, oldXL.counter);
@@ -35,6 +35,7 @@ public class XL extends JFrame implements Printable {
         counter.increment();
         currentModel = new CurrentModel();
         env = new Sheet();
+        statusLabel = new StatusLabel(env);
         JPanel statusPanel = new StatusPanel(statusLabel, currentModel);
         JPanel sheetPanel = new SheetPanel(ROWS, COLUMNS, currentModel);
         Editor editor = new Editor(currentModel, env);   
